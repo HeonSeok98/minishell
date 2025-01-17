@@ -6,40 +6,40 @@ NAME = minishell
 OBJS = $(SRCS:.c=.o)
 RM = rm -f
 SRCS = ./minishell.c			\
-	   ./minishell_utils.c		\
-	   ./tokenizer.c			\
-	   ./builtin_cd.c			\
-	   ./builtin_echo.c			\
-	   ./builtin_env.c			\
-	   ./builtin_exit.c			\
-	   ./builtin_export.c		\
-	   ./builtin_export_print.c	\
-	   ./builtin_pwd.c			\
-	   ./builtin_unset.c		\
-	   ./environment.c			\
-	   ./envp_utils.c			\
-	   ./envp_utils2.c			\
-	   ./execute.c				\
-	   ./execute_utils.c		\
-	   ./execute_utils2.c		\
-	   ./find_path.c			\
-	   ./handler.c				\
-	   ./here_doc_write.c		\
-	   ./lex_get.c				\
-	   ./lex_get_from.c			\
-	   ./lex_put.c				\
-	   ./lex_put_to.c			\
-	   ./lexer.c				\
-	   ./lexer_utils.c			\
-	   ./setting.c				\
-	   ./syntax_error.c			\
-	   ./redirections.c			\
-	   ./parser.c				\
-	   ./put_get.c				\
-	   ./put_to_get_from.c		\
-	   ./quotes.c				\
-	   ./quotes_utils.c			\
-	   ./utilities.c
+	   ./utils/minishell_utils.c		\
+	   ./utils/tokenizer.c			\
+	   ./builtin/builtin_cd.c			\
+	   ./builtin/builtin_echo.c			\
+	   ./builtin/builtin_env.c			\
+	   ./builtin/builtin_exit.c			\
+	   ./builtin/builtin_export.c		\
+	   ./builtin/builtin_export_print.c	\
+	   ./builtin/builtin_pwd.c			\
+	   ./builtin/builtin_unset.c		\
+	   ./envp/environment.c			\
+	   ./envp/envp_utils.c			\
+	   ./envp/envp_utils2.c			\
+	   ./utils/execute.c				\
+	   ./utils/execute_utils.c		\
+	   ./utils/execute_utils2.c		\
+	   ./utils/find_path.c			\
+	   ./utils/handler.c				\
+	   ./utils/here_doc_write.c		\
+	   ./lexer/lex_get.c				\
+	   ./lexer/lex_get_from.c			\
+	   ./lexer/lex_put.c				\
+	   ./lexer/lex_put_to.c			\
+	   ./lexer/lexer.c				\
+	   ./lexer/lexer_utils.c			\
+	   ./utils/setting.c				\
+	   ./utils/syntax_error.c			\
+	   ./utils/redirections.c			\
+	   ./utils/parser.c				\
+	   ./utils/put_get.c				\
+	   ./utils/put_to_get_from.c		\
+	   ./utils/quotes.c				\
+	   ./utils/quotes_utils.c			\
+	   ./utils/utilities.c
 	
 %.o : %.c ./minishell.h
 	$(CC) $(CFLAGS) -c $< -o $@ -I ./ -I ./libft
